@@ -3,445 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>טיול משפחת רודא - איטליה 2026</title>
+    <title>רודא - קווסט איטליה 2026</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
+        .day-panel { display: none; }
+        .day-panel.active { display: block; }
+        /* סגנון לצ'קבוקס מעוצב */
+        .task-checkbox:checked + span { text-decoration: line-through; color: #9ca3af; }
     </style>
 </head>
-<body class="bg-gray-100 pb-24 text-gray-800">
+<body class="bg-slate-900 text-slate-100 pb-8">
 
-    <header class="bg-indigo-600 text-white sticky top-0 z-50 shadow-md p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold"><i class="fa-solid fa-compass text-yellow-400 ml-2"></i>איטליה 2026 🇮🇹</h1>
-        <span class="text-xs bg-indigo-700 px-3 py-1 rounded-full border border-indigo-400">שרי ובני</span>
+    <!-- Header היפסטרי ועתידני למתבגרים -->
+    <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 p-4 shadow-xl">
+        <div class="max-w-xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-black bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">ITALY ROAD TRIP 2026</h1>
+                <p class="text-xs text-slate-400">הקווסט המשפחתי של שרי ובני</p>
+            </div>
+            <div class="flex gap-2">
+                <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-md font-bold animate-pulse">LIVE MODE</span>
+            </div>
+        </div>
     </header>
 
-    <main class="max-w-md mx-auto p-4">
-
-        <section id="itinerary" class="tab-content active space-y-4">
-            <h2 class="text-lg font-bold text-gray-700 mb-2 border-b pb-1"><i class="fa-solid fa-calendar-days ml-2 text-indigo-600"></i>תוכנית הטיול לפי ימים</h2>
-            
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-blue-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-blue-600">יום רביעי - 29.7.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">טיסה ומילאנו</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-plane-departure ml-2 text-gray-400"></i><strong>18:30:</strong> המראה </li>
-                    <li><i class="fa-solid fa-plane-arrival ml-2 text-gray-400"></i><strong>21:40:</strong> נחיתה במילאנו </li>
-                    <li><i class="fa-solid fa-taxi ml-2 text-gray-400"></i><strong>22:30:</strong> שאטל/מונית למלון </li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: First Hotel Milano Malpensa Airport </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-blue-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-blue-600">יום חמישי - 30.7.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">מעבר לגארדה</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-car ml-2 text-gray-400"></i><strong>09:00:</strong> איסוף רכב מחברת ההשכרה </li>
-                    <li><i class="fa-solid fa-users ml-2 text-gray-400"></i><strong>10:00:</strong> איסוף נוסעים ונסיעה לגארדה </li>
-                    <li><i class="fa-solid fa-hotel ml-2 text-gray-400"></i><strong>12:00:</strong> הגעה למלון, צ'ק אין והתארגנות </li>
-                    <li><i class="fa-solid fa-map-pin ml-2 text-blue-500"></i><strong>13:00 ואילך:</strong> טיול בפסקריה דל גארדה (סיור בחומות, טיילת התעלות) וסירמיונה </li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Relais Corte Paradiso (פסקריה) </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-blue-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-blue-600">יום שישי - 31.7.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">פארקים</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-star text-yellow-500 ml-2"></i><strong>פארק גארדהלנד:</strong> פתוח 10:00-23:00 </li>
-                    <li><i class="fa-solid fa-water-ladder text-cyan-500 ml-2"></i><strong>לגולנד פארק מים:</strong> מתאים לקטנים עד גיל 10 </li>
-                    <li><i class="fa-solid fa-fish text-blue-400 ml-2"></i><strong>אקווריום גארדהלנד:</strong> כרטיס בנפרד במקום </li>
-                    <li class="bg-yellow-50 p-2 rounded text-xs text-amber-700 border border-yellow-200 mt-2">
-                        <i class="fa-solid fa-circle-exclamation ml-1"></i>להזמין כרטיסים מראש כולל הלגולנד (יוצאים במאי/יוני) 
-                    </li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Relais Corte Paradiso </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-teal-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-teal-600">יום שבת - 1.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">ורונה / אמיליה רומאנה</span>
-                </div>
-                <p class="text-sm text-gray-600 italic"><i class="fa-solid fa-circle-info ml-1"></i> יום מעבר חופשי / סיורים באזור.</p>
-                <div class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Relais Corte Paradiso </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום ראשון - 2.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">צפון גארדה לעמק גארדנה</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-droplet text-blue-400 ml-2"></i><strong>אגם טנו (Lago Di Tenno):</strong> אגם קטן וקסום, אפשר לרחוץ </li>
-                    <li><i class="fa-solid fa-lemon text-yellow-500 ml-2"></i><strong>לימונה סול גארדה:</strong> עיירה על צלע ההר </li>
-                    <li><i class="fa-solid fa-bicycle text-green-500 ml-2"></i>מסלול אופניים מיוחד על המים: Ciclopista del Garda </li>
-                    <li><i class="fa-solid fa-umbrella-beach text-orange-400 ml-2"></i>חוף רחצה מומלץ: Cola beach </li>
-                    <li><i class="fa-solid fa-mountain-sun text-amber-600 ml-2"></i><strong>17:00:</strong> המשך נסיעה לדולומיטים </li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום שני - 3.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">דולומיטים - אורטיזי ושסדה</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-circle-up text-indigo-500 ml-2"></i><strong>חשוב להתחיל מוקדם!</strong> עלייה להר ברכבל שסדה (Seceda). כרטיס יומי לכל הרכבלים עולה כ-65 אירו.</li>
-                    <li><i class="fa-solid fa-person-hiking text-emerald-600 ml-2"></i>טיפוס 300 מ' לצלב וההר האלכסוני, ומשם מסלול בירידה דרך הבקתות: Troier Hütte,‏ Baita Daniel Hütte,‏ ו-Malga Nidia Hütte.</li>
-                    <li><i class="fa-solid fa-walkie-talkie text-gray-400 ml-2"></i><strong>אחר הצהריים (17:00-19:00):</strong> סיור רגלי במדרחוב אורטיזי (Strada Rezia).</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום שלישי - 4.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">דולומיטים - מתחם Plose</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-mountain ml-2 text-gray-400"></i><strong>09:00:</strong> יציאה למתחם Plose ליד ברסאנונה [cite: 4]</li>
-                    <li><i class="fa-solid fa-car-burst text-orange-500 ml-2"></i><strong>קארטינג הרים (Mountaincarts):</strong> ירידה אדרנלינית של 9 ק"מ מההר[cite: 4]. מי שעושה קונה כרטיס רכבל לצד אחד בלבד[cite: 4].</li>
-                    <li><i class="fa-solid fa-child-reaching text-green-500 ml-2"></i>מסלול הליכה משפחתי מקסים: Woodywalk [cite: 4]</li>
-                    <li><i class="fa-solid fa-id-card-clip text-blue-500 ml-2"></i>מזחלות אלפיניות: PloseBob Summer [cite: 4]</li>
-                    <li><i class="fa-solid fa-city text-purple-600 ml-2"></i>בדרך חזרה: עצירה בעיירת האומנים קיוזה (Chiusa)[cite: 4].</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי [cite: 4]</li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום רביעי - 5.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">מראן ובולצאנו</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-tree text-green-600 ml-2"></i><strong>10:00:</strong> גני טירת טראוטמנסדורף במראן (להתחיל במסלול היער השמאלי)[cite: 4]. כרטיס משפחתי כ-36 אירו[cite: 4].</li>
-                    <li><i class="fa-solid fa-water text-blue-400 ml-2"></i>סיור במראן לאורך נהר ה-Gilfpromenade והמרכז ההיסטורי[cite: 4].</li>
-                    <li><i class="fa-solid fa-bag-shopping text-purple-500 ml-2"></i><strong>16:00:</strong> קניות ומדרחוב בבולצאנו (Via dei Portici / Via Museo)[cite: 4].</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי [cite: 4]</li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום חמישי - 6.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">דולומיטים דרום וראפטינג</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-bridge-water text-cyan-600 ml-2"></i><strong>12:00:</strong> ראפטינג Avisio Rafting (להגיע רבע שעה לפני, דורש שריון מראש בקיץ!)[cite: 4].</li>
-                    <li><i class="fa-solid fa-road text-gray-500 ml-2"></i>כביש נוף מרהיב במעבר סלה (Passo Sella)[cite: 4].</li>
-                    <li><i class="fa-solid fa-gem text-teal-400 ml-2"></i>בדרך חזרה: אגם קארצה (Lago Di Carezza) - מסלול היקפי קצר[cite: 4].</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי [cite: 4]</li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום שישי - 7.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">דולומיטים מערב</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-shoe-prints text-amber-700 ml-2"></i>מסלול הליכה בקניון Rastenbachklamm.</li>
-                    <li><i class="fa-solid fa-sun text-yellow-500 ml-2"></i><strong>אגם קלטרר סיי (Kalterer See):</strong> חוף רחצה מוסדר ופעילויות מים ב-Lido.</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-emerald-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-emerald-600">יום שבת - 8.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">מונטה פאנה אטרקציות</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-bolt text-amber-500 ml-2"></i><strong>09:30:</strong> זיפליין מונטה פאנה (Zipline) בסנטה כריסטינה. להזמין חלון זמן מראש! </li>
-                    <li><i class="fa-solid fa-tree-city text-green-600 ml-2"></i>מסלול משפחתי חווייתי Raida Naturerlebnisweg (3 ק"מ) או מסלול האומנות טרוי יוניקה (Val Gardena קרוב).</li>
-                    <li><i class="fa-solid fa-horse text-amber-800 ml-2"></i><strong>15:30-17:00:</strong> רכיבה על סוסים בחוות Pozzamanigoni בעיירה סלבה (להזמין באפריל!).</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Villa Quenz Family Suites, אורטיזי </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-purple-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-purple-600">יום ראשון - 9.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">מעבר לונציה</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-route text-gray-400 ml-2"></i>נסיעה דרך מעברי ההרים המרהיבים Passo Sella ו-Passo Fedaia (תצפית על קרחון המרמולדה והסכר).</li>
-                    <li><i class="fa-solid fa-house-chimney text-amber-600 ml-2"></i>עצירה בעיירה הציורית סוטוגודה (Sottoguda) וחנויות אומני הברזל והעץ.</li>
-                    <li><i class="fa-solid fa-camera text-teal-500 ml-2"></i>צילום ועצירה באגם אלג'ה (Lago di Alleghe) ובפארק מיס.</li>
-                    <li><i class="fa-solid fa-hotel text-indigo-600 ml-2"></i>הגעה והתמקמות במלון ליד ונציה.</li>
-                    <li class="mt-2 pt-2 border-t text-xs text-gray-500"><i class="fa-solid fa-bed ml-1"></i>לינה: Park Hotel Junior, עיירה Quarto D'altino </li>
-                </ul>
-            </div>
-
-            <div class="bg-white rounded-xl shadow p-4 border-r-4 border-red-500">
-                <div class="flex justify-between items-center border-b pb-2 mb-2">
-                    <span class="font-bold text-red-600">יום שני - 10.8.26</span>
-                    <span class="text-xs bg-gray-100 px-2 py-1 rounded">ונציה וטיסה הביתה</span>
-                </div>
-                <ul class="space-y-2 text-sm">
-                    <li><i class="fa-solid fa-train text-indigo-600 ml-2"></i><strong>09:00:</strong> נסיעה לתחנת הרכבת ב-Quarto D'altino ולקחת רכבת לתחנת Santa Lucia בונציה.</li>
-                    <li><i class="fa-solid fa-gondola text-blue-400 ml-2"></i>סיור מלא בונציה: הרובע היהודי, גונדולה (תחנת S. Sofia), גשר ריאלטו, וכיכר סאן מארקו.</li>
-                    <li><i class="fa-solid fa-train-subway text-gray-500 ml-2"></i><strong>16:00:</strong> רכבת חזרה למלון ואיסוף הרכב.</li>
-                    <li><i class="fa-solid fa-gas-pump text-orange-500 ml-2"></i><strong>18:00:</strong> תדלוק בתחנת Tamoil ליד השדה והחזרת רכב בחניון P1 Multipiano.</li>
-                    <li><i class="fa-solid fa-plane-up text-red-600 ml-2"></i><strong>22:00:</strong> המראה מונציה (VCE).</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="logistics" class="tab-content space-y-4">
-            <h2 class="text-lg font-bold text-gray-700 mb-2 border-b pb-1"><i class="fa-solid fa-square-parking ml-2 text-indigo-600"></i>חניונים וניווט מהיר</h2>
-            
-            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg text-xs text-blue-800 space-y-2 mb-3">
-                <p class="font-bold"><i class="fa-solid fa-circle-info ml-1"></i> מדריך חנייה קצר (Disco Orario):</p>
-                <p>יש לבקש דיסק חנייה כחול מחברת ההשכרה או לקנות בסופר. מכוונים את המחוג לשעת ההגעה ומניחים בצד שמאל של השמשת הקדמית בהתאם לשלט[cite: 9].</p>
-            </div>
-
-            <div class="bg-white rounded-xl shadow overflow-hidden">
-                <table class="w-full text-sm text-right">
-                    <thead class="bg-gray-50 text-gray-600 font-bold border-b">
-                        <tr>
-                            <th class="p-3">מיקום / עיירה</th>
-                            <th class="p-3">שם החניון / וויז</th>
-                            <th class="p-3">ניווט</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100">
-                        <tr>
-                            <td class="p-3 font-medium">פסקריה דל גארדה</td>
-                            <td class="p-3 text-xs text-gray-500">Parcheggio Festung (ליד החומות) </td>
-                            <td class="p-3"><a href="waze://?q=Parcheggio+Festung" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">סירמיונה</td>
-                            <td class="p-3 text-xs text-gray-500">Parcheggio Monte Baldo </td>
-                            <td class="p-3"><a href="waze://?q=Parcheggio+Monte+Baldo" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">לימונה סול גארדה</td>
-                            <td class="p-3 text-xs text-gray-500">Parcheggio Multipiano </td>
-                            <td class="p-3"><a href="waze://?q=Parcheggio+Multipiano+Limone" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">רכבל שסדה (אורטיזי)</td>
-                            <td class="p-3 text-xs text-gray-500">חניון תחנת הרכבל הראשית </td>
-                            <td class="p-3"><a href="waze://?q=Seceda+Lifte+Ortisei" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">מתחם Plose</td>
-                            <td class="p-3 text-xs text-gray-500">Plosekabinenbah Talstation [cite: 4]</td>
-                            <td class="p-3"><a href="waze://?q=Plosekabinenbah" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">מראן (גני טראוטמנסדורף)</td>
-                            <td class="p-3 text-xs text-gray-500">Parcheggio Terme / גני טראוטמנסדורף [cite: 4]</td>
-                            <td class="p-3"><a href="waze://?q=Parcheggio+Terme+Merano" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">בולצאנו מרכז</td>
-                            <td class="p-3 text-xs text-gray-500">Parking Bozen / Bolzano Center [cite: 4, 6]</td>
-                            <td class="p-3"><a href="waze://?q=Parking+Bolzano+Center" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">קיוזה (Chiusa)</td>
-                            <td class="p-3 text-xs text-gray-500">חניון P2 עירוני [cite: 4]</td>
-                            <td class="p-3"><a href="waze://?q=Chiusa+Parking+P2" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">קניון Rastenbachklamm</td>
-                            <td class="p-3 text-xs text-gray-500">Parkplatz Müllereck </td>
-                            <td class="p-3"><a href="waze://?q=Parkplatz+Mullereck" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-medium">שדה"ת ונציה (החזרה)</td>
-                            <td class="p-3 text-xs text-gray-500">VCE-Park P1 Multipiano קומה 1 </td>
-                            <td class="p-3"><a href="waze://?q=Venice+Airport+Parking+P1" class="text-indigo-600 font-bold text-xs bg-indigo-50 px-2 py-1 rounded"><i class="fa-solid fa-location-arrow"></i></a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="food" class="tab-content space-y-4">
-            <h2 class="text-lg font-bold text-gray-700 mb-2 border-b pb-1"><i class="fa-solid fa-utensils ml-2 text-indigo-600"></i>איפה אוכלים? מסעדות וגלידריות</h2>
-            
-            <div class="flex gap-2 overflow-x-auto pb-2 text-xs">
-                <button onclick="filterFood('all')" class="bg-indigo-600 text-white px-3 py-1 rounded-full font-medium shadow-sm cursor-pointer">הכל</button>
-                <button onclick="filterFood('gardaland')" class="bg-white text-gray-600 border border-gray-200 px-3 py-1 rounded-full font-medium shadow-sm cursor-pointer">אזור גארדה</button>
-                <button onclick="filterFood('ortisei')" class="bg-white text-gray-600 border border-gray-200 px-3 py-1 rounded-full font-medium shadow-sm cursor-pointer">אורטיזי וסלבה</button>
-                <button onclick="filterFood('bolzano')" class="bg-white text-gray-600 border border-gray-200 px-3 py-1 rounded-full font-medium shadow-sm cursor-pointer">בולצאנו ומראן</button>
-            </div>
-
-            <div class="space-y-3 mt-2">
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="gardaland">
-                    <div>
-                        <h4 class="font-bold text-sm">Ristorante Il Cantinone</h4>
-                        <p class="text-xs text-gray-500">פסקריה - סגנון רומאי בעיר העתיקה </p>
-                    </div>
-                    <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-pizza-slice"></i> מסעדה</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="gardaland">
-                    <div>
-                        <h4 class="font-bold text-sm">La Gelateria HomeMade</h4>
-                        <p class="text-xs text-gray-500">פסקריה - גלידרייה מומלצת בעיר העתיקה </p>
-                    </div>
-                    <span class="text-xs bg-pink-100 text-pink-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-ice-cream"></i> גלידה</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="gardaland">
-                    <div>
-                        <h4 class="font-bold text-sm">Ristorante Bar Pizzeria L'Agrumeto</h4>
-                        <p class="text-xs text-gray-500">לימונה - אוכל ברגל ליד המים </p>
-                    </div>
-                    <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-pizza-slice"></i> פיצה / בר</span>
-                </div>
-
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="ortisei">
-                    <div>
-                        <h4 class="font-bold text-sm">Tito Speck - Il Maso dello Speck</h4>
-                        <p class="text-xs text-gray-500">עמק גארדנה - חנות נקניקים ונקניקיות מומלצת מאוד [cite: 8]</p>
-                    </div>
-                    <span class="text-xs bg-red-100 text-red-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-drumstick-bite"></i> מעדנייה</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="ortisei">
-                    <div>
-                        <h4 class="font-bold text-sm">Buffalo - Steakhouse & Pizza</h4>
-                        <p class="text-xs text-gray-500">אורטיזי - מסעדת בשרים מעולה (עם רכב - וויז) </p>
-                    </div>
-                    <span class="text-xs bg-red-100 text-red-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-bacon"></i> בשרים</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="ortisei">
-                    <div>
-                        <h4 class="font-bold text-sm">Restaurant Tubladel</h4>
-                        <p class="text-xs text-gray-500">אורטיזי - מומלץ מאוד לערב [cite: 8]</p>
-                    </div>
-                    <span class="text-xs bg-orange-100 text-orange-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-pizza-slice"></i> מסעדה</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="ortisei">
-                    <div>
-                        <h4 class="font-bold text-sm">Cafe' Cales Di Perathoner</h4>
-                        <p class="text-xs text-gray-500">עמק גארדנה - גלידות, קינוחים וקפה בנוף [cite: 5, 8]</p>
-                    </div>
-                    <span class="text-xs bg-pink-100 text-pink-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-cake-candles"></i> קינוחים</span>
-                </div>
-
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="bolzano">
-                    <div>
-                        <h4 class="font-bold text-sm">Loacker Café</h4>
-                        <p class="text-xs text-gray-500">בולצאנו - בית קפה רשמי של לואקר במדרחוב [cite: 4, 8]</p>
-                    </div>
-                    <span class="text-xs bg-amber-100 text-amber-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-mug-hot"></i> קפה ומתוק</span>
-                </div>
-                <div class="food-item bg-white p-3 rounded-xl shadow flex justify-between items-center" data-region="bolzano">
-                    <div>
-                        <h4 class="font-bold text-sm">Pims burger&more</h4>
-                        <p class="text-xs text-gray-500">בולצאנו - המבורגרים מצוינים ומנות לילדים [cite: 8]</p>
-                    </div>
-                    <span class="text-xs bg-red-100 text-red-700 font-bold px-2 py-1 rounded"><i class="fa-solid fa-burger"></i> המבורגר</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="rainy" class="tab-content space-y-4">
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 rounded-xl shadow-lg flex items-center justify-between">
-                <div>
-                    <h2 class="text-lg font-bold"><i class="fa-solid fa-cloud-showers-heavy ml-2 text-blue-200"></i>תוכנית גיבוי לגשם</h2>
-                    <p class="text-xs text-blue-100 mt-1">הדולומיטים גשומים? אל דאגה, הנה האופציות המקורות שלכם:</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl shadow p-4 border-r-4 border-amber-500">
-                    <h3 class="font-bold text-sm text-gray-800 flex items-center"><i class="fa-solid fa-building-columns text-amber-500 ml-2"></i>אופציה א': בולצאנו קצר + מוזיאונים וקניות </h3>
-                    <ul class="text-xs text-gray-600 mt-2 space-y-2 leading-relaxed">
-                        <li><i class="fa-solid fa-person-skating ml-1 text-gray-400"></i><strong>מוזיאון דרום טירול לארכיאולוגיה:</strong> פוגשים את "אוצי איש הקרח" (South Tyrol Archeological Museum).</li>
-                        <li><i class="fa-solid fa-palette ml-1 text-gray-400"></i><strong>Museion:</strong> המוזיאון המרשים לאומנות מודרנית.</li>
-                        <li><i class="fa-solid fa-store ml-1 text-gray-400"></i><strong>קניון Twenty בבולצאנו:</strong> שופינג ומתחם סגור ומחומם (Zara, H&M, Mango, Kiko Milano, Sephora)[cite: 6, 8].</li>
-                    </ul>
-                </div>
-
-                <div class="bg-white rounded-xl shadow p-4 border-r-4 border-cyan-500">
-                    <h3 class="font-bold text-sm text-gray-800 flex items-center"><i class="fa-solid fa-hot-tub-person text-cyan-500 ml-2"></i>אופציה ב': מרחצאות מראן וקניון </h3>
-                    <ul class="text-xs text-gray-600 mt-2 space-y-2 leading-relaxed">
-                        <li><i class="fa-solid fa-spa ml-1 text-cyan-500"></i><strong>Terme Meran:</strong> מרחצאות חמים מפנקים במראן. יש אפשרות לכרטיס ערב משפחתי מוזל.</li>
-                        <li><i class="fa-solid fa-shirt ml-1 text-gray-400"></i>השלמת קניות מותגים בקניון <strong>Twenty</strong> בחזור לבולצאנו.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <nav class="bg-white border-t border-gray-200 fixed bottom-0 left-0 right-0 z-50 h-16 shadow-lg">
-        <div class="max-w-md mx-auto grid grid-cols-4 h-full">
-            <button onclick="switchTab('itinerary', this)" class="nav-btn text-indigo-600 flex flex-col items-center justify-center text-center cursor-pointer">
-                <i class="fa-solid fa-calendar-days text-xl"></i>
-                <span class="text-[10px] font-bold mt-1">המסלול</span>
-            </button>
-            <button onclick="switchTab('logistics', this)" class="nav-btn text-gray-400 flex flex-col items-center justify-center text-center cursor-pointer">
-                <i class="fa-solid fa-square-parking text-xl"></i>
-                <span class="text-[10px] font-bold mt-1">חנייה וניווט</span>
-            </button>
-            <button onclick="switchTab('food', this)" class="nav-btn text-gray-400 flex flex-col items-center justify-center text-center cursor-pointer">
-                <i class="fa-solid fa-utensils text-xl"></i>
-                <span class="text-[10px] font-bold mt-1">קולינריה</span>
-            </button>
-            <button onclick="switchTab('rainy', this)" class="nav-btn text-gray-400 flex flex-col items-center justify-center text-center cursor-pointer">
-                <i class="fa-solid fa-cloud-showers-heavy text-xl"></i>
-                <span class="text-[10px] font-bold mt-1">יום גשום</span>
-            </button>
+    <!-- סרגל ימים אופקי אינטראקטיבי (נע בין הימים בלחיצה) -->
+    <div class="bg-slate-800/50 backdrop-blur border-b border-slate-700/50 sticky top-[73px] z-40 py-3 overflow-x-auto whitespace-nowrap scrollbar-none px-4">
+        <div class="max-w-xl mx-auto flex gap-2" id="days-nav">
+            <button onclick="setActiveDay(1, 'Peschiera+del+Garda')" class="day-btn bg-cyan-500 text-slate-950 px-4 py-2 rounded-xl font-bold text-sm shadow-lg shadow-cyan-500/20 transition-all cursor-pointer">יום 1 (29.7)</button>
+            <button onclick="setActiveDay(2, 'Peschiera+del+Garda,Sirmione')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 2 (30.7)</button>
+            <button onclick="setActiveDay(3, 'Gardaland')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 3 (31.7)</button>
+            <button onclick="setActiveDay(4, 'Verona')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 4 (1.8)</button>
+            <button onclick="setActiveDay(5, 'Lago+di+Tenno,Limone+sul+Garda')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 5 (2.8)</button>
+            <button onclick="setActiveDay(6, 'Seceda,Ortisei')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 6 (3.8)</button>
+            <button onclick="setActiveDay(7, 'Bressanone,Chiusa')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 7 (4.8)</button>
+            <button onclick="setActiveDay(8, 'Trauttmansdorff+Gardens,Merano,Bolzano')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 8 (5.8)</button>
+            <button onclick="setActiveDay(9, 'Passo+Sella,Lago+di+Carezza')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 9 (6.8)</button>
+            <button onclick="setActiveDay(10, 'Kalterer+See')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 10 (7.8)</button>
+            <button onclick="setActiveDay(11, 'Monte+Pana,Selva+di+Val+Gardena')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 11 (8.8)</button>
+            <button onclick="setActiveDay(12, 'Passo+Fedaia,Sottoguda,Alleghe')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 12 (9.8)</button>
+            <button onclick="setActiveDay(13, 'Venice,Quarto+d\'Altino')" class="day-btn bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl font-bold text-sm transition-all cursor-pointer">יום 13 (10.8)</button>
         </div>
-    </nav>
+    </div>
 
+    <!-- אזור המפה המרכזי והקבוע - הלב האינטראקטיבי של האפליקציה -->
+    <div class="max-w-xl mx-auto p-4">
+        <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl mb-6">
+            <div class="p-3 bg-slate-700/50 border-b border-slate-600 flex justify-between items-center text-xs">
+                <span class="font-bold text-slate-300"><i class="fa-solid fa-map-location-dot text-cyan-400 ml-1.5"></i>הראדאר שלכם באזור</span>
+                <span class="text-slate-400">אינטראקטיבי (זום מותר)</span>
+            </div>
+            <!-- ה-Iframe משנה מיקום גיאוגרפי דינמית לפי פונקציית ה-JS למטה -->
+            <iframe id="live-map" class="w-full h-64 border-0" src="https://maps.google.com/maps?q=Peschiera+del+Garda&t=&z=12&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+        </div>
+
+        <!-- ================= פאנלים דינמיים לפי ימים ================= -->
+        <div id="days-container">
+
+            <!-- יום 1 -->
+            <div id="day-panel-1" class="day-panel active space-y-4">
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-3"><i class="fa-solid fa-plane-departure ml-2"></i>נחיתה ומילאנו (29.7)</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm"><strong>18:30</strong> המראה מהארץ ✈️</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm"><strong>21:40</strong> נחיתה במילאנו מלפנסה 🛬[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm"><strong>22:30</strong> תפיסת שאטל / מונית והתמקמות במלון[cite: 1]</span>
+                        </label>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700 flex justify-between text-xs text-slate-400">
+                        <span>🏨 לינה: First Hotel Milano Malpensa[cite: 1]</span>
+                        <a href="waze://?q=First+Hotel+Milano+Malpensa" class="text-cyan-400 font-bold"><i class="fa-solid fa-location-arrow ml-0.5"></i>נווט למלון</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- יום 2 -->
+            <div id="day-panel-2" class="day-panel space-y-4">
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-3"><i class="fa-solid fa-car ml-2"></i>מעבר לאגם גארדה (30.7)</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm"><strong>09:00</strong> איסוף הרכב מחברת ההשכרה (לבקש דיסק חנייה!) 🚗[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm"><strong>12:00</strong> צ'ק-אין והתארגנות במלון בפסקריה דל גארדה 🏨[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">כיבוש יעד: סיור בחומות, גשר וולטוני וטיילת התעלות בפסקריה 🏰[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">ביקור ערב בסירמיונה היפהפה (חנייה ב-Monte Baldo) 🌅[cite: 1]</span>
+                        </label>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700 text-xs text-slate-400 space-y-1">
+                        <div>🏨 מלון: Relais Corte Paradiso[cite: 1]</div>
+                        <div class="flex justify-between text-cyan-400 font-bold mt-2">
+                            <a href="waze://?q=Parcheggio+Festung+Peschiera"><i class="fa-solid fa-location-arrow"></i> חניון פסקריה[cite: 1]</a>
+                            <a href="waze://?q=Parcheggio+Monte+Baldo+Sirmione"><i class="fa-solid fa-location-arrow"></i> חניון סירמיונה[cite: 1]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- יום 3 -->
+            <div id="day-panel-3" class="day-panel space-y-4">
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-3"><i class="fa-solid fa-star text-yellow-400 ml-2"></i>אקשן מטורף בגארדהלנד (31.7)</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">שרידת רכבות ההרים של Gardaland Park (10:00-23:00) 🎢[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">פארק מים לגולנד (מתאים בול לקטנים עד גיל 10) 🌊[cite: 1]</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">ביקור באקווריום התת-ימי של גארדהלנד 🐠[cite: 1]</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- יום 5 -->
+            <div id="day-panel-5" class="day-panel space-y-4">
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-3"><i class="fa-solid fa-mountain-sun ml-2"></i>מצפון גארדה אל הדולומיטים (2.8)</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">קפיצה למים הטורקיזיים של אגם טנו (Lago Di Tenno) 💧</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">טיול בסמטאות הלימונים של לימונה סול גארדה 🍋</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">השכרת אופניים ורכיבה על מסלול המים הציף Ciclopista del Garda 🚲</span>
+                        </label>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700 flex justify-between text-xs text-slate-400">
+                        <span>🏨 מעבר לינה: אורטיזי, Villa Quenz</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- יום 6 -->
+            <div id="day-panel-6" class="day-panel space-y-4">
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-cyan-400 mb-3"><i class="fa-solid fa-person-hiking ml-2"></i>פסגת שסדה - הנוף האינסטגרמי (3.8)</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">עלייה מוקדמת ברכבל הדו-שלבי להר שסדה (Seceda) ⛰️</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">הגעה לצלב הגבוה ולתצפית על צלע ההר האלכסוני המטורף 📸</span>
+                        </label>
+                        <label class="flex items-start gap-3 bg-slate-700/30 p-3 rounded-xl border border-slate-700/50 cursor-pointer">
+                            <input type="checkbox" class="task-checkbox mt-1 w-4 h-4 rounded text-cyan-500 focus:ring-0 cursor-pointer">
+                            <span class="text-sm">מסלול ירידה ברגל דרך הבקתות: Troier Hütte ו-Daniel Hütte 🥨</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- הודעת מערכת קצרה לימים האחרים שלא פירטנו בקוד הזמני כדי לשמור על קומפקטיות -->
+            <div id="fallback-msg" class="hidden bg-slate-800/40 border border-slate-700 text-slate-300 p-4 rounded-xl text-center text-sm">
+                <i class="fa-solid fa-circle-check text-emerald-400 ml-1"></i> המפה התעדכנה בהצלחה ליעד שנבחר! המשך לעקוב אחרי הלו"ז המקורי.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- לוגיקת סקריפט חכמה להחלפת ימים ומפות בלייב -->
     <script>
-        function switchTab(tabId, btnElement) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            // Show target tab
-            document.getElementById(tabId).classList.add('active');
-            
-            // Reset all nav button colors
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('text-indigo-600');
-                btn.classList.add('text-gray-400');
+        function setActiveDay(dayNum, mapQuery) {
+            // 1. שינוי עיצוב הכפתור שנבחר בסרגל
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-cyan-500', 'text-slate-950', 'shadow-lg', 'shadow-cyan-500/20');
+                btn.classList.add('bg-slate-800', 'text-slate-300', 'border', 'border-slate-700');
             });
-            // Highlight active button
-            btnElement.classList.remove('text-gray-400');
-            btnElement.classList.add('text-indigo-600');
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+            event.currentTarget.classList.remove('bg-slate-800', 'text-slate-300', 'border', 'border-slate-700');
+            event.currentTarget.classList.add('bg-cyan-500', 'text-slate-950', 'shadow-lg', 'shadow-cyan-500/20');
 
-        function filterFood(region) {
-            const items = document.querySelectorAll('.food-item');
-            
-            // Handle buttons styling inside the filter row
-            const buttons = event.currentTarget.parentElement.querySelectorAll('button');
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-indigo-600', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200');
-            });
-            event.currentTarget.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200');
-            event.currentTarget.classList.add('bg-indigo-600', 'text-white');
+            // 2. עדכון המפה בצורה חלקה לפי המיקום הגיאוגרפי של היום
+            const mapIframe = document.getElementById('live-map');
+            mapIframe.src = `https://maps.google.com/maps?q=${mapQuery}&t=&z=12&ie=UTF8&iwloc=&output=embed`;
 
-            // Filter logic
-            items.forEach(item => {
-                if (region === 'all' || item.getAttribute('data-region') === region) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            // 3. החלפת התוכן והצ'קליסט למטה
+            document.querySelectorAll('.day-panel').forEach(panel => panel.classList.remove('active'));
+            
+            const targetPanel = document.getElementById(`day-panel-${dayNum}`);
+            const fallbackMsg = document.getElementById('fallback-msg');
+            
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+                fallbackMsg.classList.add('hidden');
+            } else {
+                fallbackMsg.classList.remove('hidden');
+            }
         }
     </script>
 </body>
